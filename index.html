@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cross Country Campground</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="icon" href="images\icon.svg">
+  </head>
+  <body>
+
+    <!-- <div id="top-section">
+      <p>📍 6254 Highway 150 East Denver, NC 28037</p>
+      <p class="top-section-divider"></p>
+      <p>📞 704-483-5801</p>
+    </div> -->
+
+    <nav id="nav" class="">
+      <h1>Cross Country Campground</h1>
+      <ul id="nav__links">
+        <li class="nav__link">
+          <a href="#">Home</a>
+        </li>
+        <li class="nav__link">
+          <a href="#" id="aboutBtn">About Us</a>
+        </li>
+        <li class="nav__link">
+          <a href="#" id="activitiesBtn">Activities</a>
+        </li>
+        <li class="nav__link">
+          <a href="#" id="servicesBtn">Services</a>
+        </li>
+        <li class="nav__link">
+          <a href="#" id="contactUsBtn">Contact Us</a>
+        </li>
+      </ul>
+      <div class="hamburger-icon">
+        <div class="bar-1"></div>
+        <div class="bar-2"></div>
+        <div class="bar-3"></div>
+        <ul class="mobile-menu">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+          <li>
+            <a href="#">Activities</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- <p id="introduction">
+      A full-service campground located close to Lake Norman, Concord Mills Mall
+      and Lowes Motor Speedway
+    </p> -->
+
+    <div id="home" class="nav-section">
+      <img src="/images/relaxed.jpg" alt="relaxed" class="home-img" />
+      <div class="description">
+        <p>
+          Over 400 campsites nestled in refreshing wooded areas, most with full
+          hookup and 30-50 amp service. Complete heated bath-house, laundry and
+          onsite store. Activities abound with Carpet Golf, Shuffle Board,
+          Indoor Games, Tennis, Fishing, Swimming, Basketball, Nature Hiking and
+          even much more!
+        </p>
+      </div>
+    </div>
+
+    <div class="body-divider-container">
+      <div class="body-divider"></div>
+    </div>
+
+    <div id="about" class='nav-section'>
+        <div class="description">
+          <h2 class='section-title'>About Us</h2>
+          <p>Visit or Stay with us...</p>
+          <ul>
+            <li>
+              Overnight, Weekends, Family Vacations, Special Events, even
+              Year-round... We have so much to offer!
+            </li>
+            <li>
+              Nearby renown amusement parks, professional sports, Nascar,
+              museums, artistic entertainment, booating, fishing, adventure
+              activities and much, much more!
+            </li>
+            <li>
+              Activities for the entire family... All ages, Treasure hunts,
+              Family tournaments, too many to list...
+            </li>
+            <li>
+              Conveniently located near Post Offices, Banks, Repairs, Grocery
+              stores, Shopping, Dining... Personal services...
+            </li>
+          </ul>
+          <div class='btns'>
+            <button class="rulesBtn">Camground Rules</button>
+            <button class="ratesBtn">Camground Rates</button>
+          </div>
+        </div>
+        <img src='/images/night-rv.jpg' alt='' class='night-rv-img'></img>
+    </div>
+
+    <div class='rules modal-window hidden'>
+        <div class='exitBtn-container'>
+          <button class='exitBtn'>X</button>
+        </div>
+        <h2 class='section-title'>Campground Rules</h2>
+        <ul>
+          <li>
+            Don’t walk through other people’s sites (and make sure your kids
+            understand this, too).
+          </li>
+          <li>Keep your distance and respect others’ space.</li>
+          <li>Don’t trash your campsite.</li>
+          <li>Put out your fire – all the way out!</li>
+          <li>DO NOT BURN TRASH!</li>
+          <li>Be mindful of quiet times.</li>
+          <li>Be aware of and respectful with your lights.</li>
+          <li>Don’t be chatty with your new neighbor as soon as they pull in.</li>
+          <li>“Bring Your Own” when going over for a social visit </li>
+          <li>Don’t assume everyone loves your pet as much as you do.</li>
+          <li>Don’t assume everyone loves your kids as much as you do.</li>
+          <li>Don’t just pop-in.</li>
+          <li>
+            Familiarize yourself with campground rules – not all are the same.
+          </li>
+          <li>Don’t bring your own firewood. </li>
+          <li>Don’t cut down branches or trees in your campsite for firewood.</li>
+          <li>Respect the campground facilities.</li>
+          <li>
+            Don’t park your tow or toad vehicle in another person’s way or block
+            an open site.
+          </li>
+          <li>
+            Don’t set up camp at overnight parking, rest stop, and lot-docking
+            areas.
+          </li>
+          <li>Respect wildlife.</li>
+          <li>Only Dump Your Tanks at a Designated Dump Station</li>
+        </ul>
+    </div>
+
+    <div class='rates modal-window hidden'>
+        <div class='exitBtn-container'>
+          <button class='exitBtn'>X</button>
+        </div>
+        <h2 class='section-title'>Campground Rates</h2>
+        <table>
+          <thead>
+            <tr>
+              <th rowSpan={2} colSpan={1}>
+                Activity
+              </th>
+              <th colSpan={3}>Summer</th>
+              <th colSpan={3}>Winter</th>
+            </tr>
+            <tr>
+              <th>Daily</th>
+              <th>Weekly</th>
+              <th>Monthly</th>
+              <th>Daily</th>
+              <th>Weekly</th>
+              <th>Monthly</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RV Site Standard</td>
+              <td>$75</td>
+              <td>$450</td>
+              <td>$1400</td>
+              <td>$55</td>
+              <td>$330</td>
+              <td>$700</td>
+            </tr>
+            <tr>
+              <td>RV Site Deluxe</td>
+              <td>$85</td>
+              <td>$510</td>
+              <td>$1600</td>
+              <td>$65</td>
+              <td>$390</td>
+              <td>$800</td>
+            </tr>
+            <tr>
+              <td>Holiday</td>
+              <td>$5/night - 2 night minimum</td>
+            </tr>
+            <tr>
+              <td>Tent Site</td>
+              <td>$30</td>
+            </tr>
+            <tr>
+              <td>Glamping Tent</td>
+              <td>$80 - $130</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <div class="body-divider-container">
+        <div class="body-divider"></div>
+    </div>
+
+    <div id="activities" class='nav-section'>
+        <img src='/images/swimmer.jpg' alt='' class='swimmer-img' />
+        <div class="description">
+          <h2 class='section-title'>Activities</h2>
+          <ul>
+            <li>Nature Hiking</li>
+            <li>Shuffle Board</li>
+            <li>Indoor Games</li>
+            <li>Carpet Golf</li>
+            <li>Basketball</li>
+            <li>Swimming</li>
+            <li>Fishing</li>
+            <li>Tennis</li>
+          </ul>
+          <p>
+            We've been in the business of assisting traveling families since
+            1969, and have thousands of satisfied customers. Cross Country
+            Campground has earned accolades and recognition for our valuable
+            service and we strive to continue that level of care to you and your
+            family daily.
+          </p>
+          <div class='btns'>
+            <button>Campground Calendar</button>
+            <button class="galleryBtn">Campground Gallery</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="gallery modal-window hidden">
+      <h2 class='section-title'>Campground Gallery</h2>
+      <div id="gallery" class="slider">      
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <div class="slide first">
+            <img src="images\relaxed.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images\swimmer.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images\night-rv.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images\gas-station.jpg" alt="">
+          </div>
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-divider-container">
+        <div class="body-divider"></div>
+    </div>
+
+    <div id="services" class="nav-section">
+        <div class="description">
+          <h2 class="section-title">Services</h2>
+          <p>
+            Convenient to: Post Office, Banks, Repair Shops, Grocery Stores,
+            Shopping, Dining, Personal Services
+          </p>
+          <p>
+            <strong>Veterinary Specialties</strong> at the Lake, Butcher Boys
+            Cafe, General Store, Sagebrush, Subway, KFC/Taco Bell, Burger King,
+            Untouchables Pizza, Dollar General, CVS, Walgreens, Food Lion, Auto
+            Zone, Walmart and Lowes within 15 minutes to each.
+          </p>
+        </div>
+        <img src="/images/gas-station.jpg" alt="" class="gas-station-img" />
+    </div>
+
+    <div class="body-divider-container">
+        <div class="body-divider"></div>
+    </div>
+
+    <div id='contact-us'>
+        <form>
+          <h2 class='section-title'>Contact Us</h2>
+          <div class='form-div'>
+            <div class='form-inline'>
+              <div class='form-col'>
+                <label htmlFor='firstName' class='form-label'>
+                  First name
+                </label>
+                <input
+                  type='text'
+                  id='firstName'
+                  class='form-input'
+                  placeholder='First name'
+                />
+              </div>
+              <div class='form-col'>
+                <label htmlFor='lastName' class='form-label'>
+                  Last name
+                </label>
+                <input
+                  type='text'
+                  id='lastName'
+                  class='form-input'
+                  placeholder='Last name'
+                />
+              </div>
+            </div>
+            <div class='form-col'>
+              <label htmlFor='email' class='form-label'>
+                Email
+              </label>
+              <input
+                type='email'
+                id='email'
+                class='form-input'
+                placeholder='email@company.com'
+              />
+            </div>
+            <div class='form-col'>
+              <label htmlFor='phoneNumber' class='form-label'>
+                Phone number
+              </label>
+              <input
+                type='tel'
+                id='phoneNumber'
+                class='form-input'
+                placeholder='555-000-0000'
+              />
+            </div>
+            <div class='form-col'>
+              <label htmlFor='message' class='form-label'>
+                Message
+              </label>
+              <textarea
+                id='message'
+                class='form-input message-input'
+                rows=4
+              ></textarea>
+            </div>
+          </div>
+        </form>
+        <button class='form-btn'>
+          Send Message
+        </button>
+    </div>
+
+    <div id="footer">
+        <div class="info">
+          <div class="address">
+            <p>
+              <strong>Address:</strong>
+            </p>
+            <p>6254 Highway 150 East</p>
+            <p>Denver, NC 28037</p>
+          </div>
+          <div class="hours">
+            <p>
+              <strong>Office Hours:</strong>
+            </p>
+            <p>Mon-Thurs 9am - 5pm</p>
+            <p>Fri-Sat 9am - 6pm</p>
+            <p>Sunday 10am - 4pm</p>
+          </div>
+          <div class="contact">
+            <p>
+              <strong>Email:</strong>
+            </p>
+            <p style="overflow-wrap: break-word;">crosscountrycampground@yahoo.com</p>
+            <p>Phone: 704-483-5801</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden"></div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
