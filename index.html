@@ -6,19 +6,19 @@
     <title>Cross Country Campground</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link rel="icon" href="images\icon.svg">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="images\icon.svg">
   </head>
   <body>
 
-    <!-- <div id="top-section">
+    <div id="contact-info">
       <p>📍 6254 Highway 150 East Denver, NC 28037</p>
-      <p class="top-section-divider"></p>
+      <p class="contact-info--divider"></p>
       <p>📞 704-483-5801</p>
-    </div> -->
+    </div>
 
-    <nav id="nav" class="">
+    <nav id="nav">
       <h1>Cross Country Campground</h1>
       <ul id="nav__links">
         <li class="nav__link">
@@ -61,13 +61,13 @@
       </div>
     </nav>
 
-    <!-- <p id="introduction">
+    <p id="introduction">
       A full-service campground located close to Lake Norman, Concord Mills Mall
       and Lowes Motor Speedway
-    </p> -->
+    </p>
 
-    <div id="home" class="nav-section">
-      <img src="/images/relaxed.jpg" alt="relaxed" class="home-img" />
+    <div id="home" class="section">
+      <img src="images\relaxed.jpg" alt="relaxed" class="home-img" />
       <div class="description">
         <p>
           Over 400 campsites nestled in refreshing wooded areas, most with full
@@ -79,11 +79,11 @@
       </div>
     </div>
 
-    <div class="body-divider-container">
-      <div class="body-divider"></div>
+    <div class="divider--container">
+      <div class="divider"></div>
     </div>
 
-    <div id="about" class='nav-section'>
+    <div id="about" class='section'>
         <div class="description">
           <h2 class='section-title'>About Us</h2>
           <p>Visit or Stay with us...</p>
@@ -111,7 +111,7 @@
             <button class="ratesBtn">Camground Rates</button>
           </div>
         </div>
-        <img src='/images/night-rv.jpg' alt='' class='night-rv-img'></img>
+        <img src='images\night-rv.jpg' alt='' class='night-rv-img'></img>
     </div>
 
     <div class='rules modal-window hidden'>
@@ -119,39 +119,33 @@
           <button class='exitBtn'>X</button>
         </div>
         <h2 class='section-title'>Campground Rules</h2>
-        <ul>
-          <li>
-            Don’t walk through other people’s sites (and make sure your kids
-            understand this, too).
-          </li>
-          <li>Keep your distance and respect others’ space.</li>
-          <li>Don’t trash your campsite.</li>
-          <li>Put out your fire – all the way out!</li>
-          <li>DO NOT BURN TRASH!</li>
-          <li>Be mindful of quiet times.</li>
-          <li>Be aware of and respectful with your lights.</li>
-          <li>Don’t be chatty with your new neighbor as soon as they pull in.</li>
-          <li>“Bring Your Own” when going over for a social visit </li>
-          <li>Don’t assume everyone loves your pet as much as you do.</li>
-          <li>Don’t assume everyone loves your kids as much as you do.</li>
-          <li>Don’t just pop-in.</li>
-          <li>
-            Familiarize yourself with campground rules – not all are the same.
-          </li>
-          <li>Don’t bring your own firewood. </li>
-          <li>Don’t cut down branches or trees in your campsite for firewood.</li>
-          <li>Respect the campground facilities.</li>
-          <li>
-            Don’t park your tow or toad vehicle in another person’s way or block
-            an open site.
-          </li>
-          <li>
-            Don’t set up camp at overnight parking, rest stop, and lot-docking
-            areas.
-          </li>
-          <li>Respect wildlife.</li>
-          <li>Only Dump Your Tanks at a Designated Dump Station</li>
-        </ul>
+        <textarea
+                name="rules"
+                rows='20'
+                cols='80'
+                disabled
+              >
+- Don’t walk through other people’s sites (and make sure your kids understand this, too).
+- Don’t trash your campsite.
+- Keep your distance and respect others’ space.
+- Put out your fire – all the way out!
+- DO NOT BURN TRASH!
+- Be mindful of quiet times.
+- Be aware of and respectful with your lights.
+- Don’t be chatty with your new neighbor as soon as they pull in.
+- “Bring Your Own” when going over for a social visit 
+- Don’t assume everyone loves your pet as much as you do.
+- Don’t assume everyone loves your kids as much as you do.
+- Don’t just pop-in.
+- Familiarize yourself with campground rules – not all are the same.
+- Don’t bring your own firewood. 
+- Don’t cut down branches or trees in your campsite for firewood.
+- Respect the campground facilities.
+- Don’t park your tow or toad vehicle in another person’s way or block an open site.
+- Don’t set up camp at overnight parking, rest stop, and lot-docking areas.
+- Respect wildlife.
+- Only Dump Your Tanks at a Designated Dump Station
+      </textarea>
     </div>
 
     <div class='rates modal-window hidden'>
@@ -212,12 +206,12 @@
         </table>
     </div>
 
-    <div class="body-divider-container">
-        <div class="body-divider"></div>
+    <div class="divider--container">
+        <div class="divider"></div>
     </div>
 
-    <div id="activities" class='nav-section'>
-        <img src='/images/swimmer.jpg' alt='' class='swimmer-img' />
+    <div id="activities" class='section'>
+        <img src='images\swimmer.jpg' alt='' class='swimmer-img' />
         <div class="description">
           <h2 class='section-title'>Activities</h2>
           <ul>
@@ -264,12 +258,6 @@
           <div class="slide">
             <img src="images\gas-station.jpg" alt="">
           </div>
-          <div class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
-          </div>
         </div>
         <div class="navigation-manual">
           <label for="radio1" class="manual-btn"></label>
@@ -280,11 +268,11 @@
       </div>
     </div>
 
-    <div class="body-divider-container">
-        <div class="body-divider"></div>
+    <div class="divider--container">
+        <div class="divider"></div>
     </div>
 
-    <div id="services" class="nav-section">
+    <div id="services" class="section">
         <div class="description">
           <h2 class="section-title">Services</h2>
           <p>
@@ -298,11 +286,11 @@
             Zone, Walmart and Lowes within 15 minutes to each.
           </p>
         </div>
-        <img src="/images/gas-station.jpg" alt="" class="gas-station-img" />
+        <img src="images\gas-station.jpg" alt="" class="gas-station-img" />
     </div>
 
-    <div class="body-divider-container">
-        <div class="body-divider"></div>
+    <div class="divider--container">
+        <div class="divider"></div>
     </div>
 
     <div id='contact-us'>
