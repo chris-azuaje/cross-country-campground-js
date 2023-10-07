@@ -26,7 +26,7 @@ body {
 }
 
 /* Modal Window & Overlay */
-.modal-window {
+.modal {
   z-index: 10;
   background-color: var(--white);
   border: 1px solid var(--gray);
@@ -98,11 +98,11 @@ body {
   display: flex;
 }
 
-.nav__link {
+.nav__item {
   list-style: none;
 }
 
-.nav__link a {
+.nav__item a {
   color: var(--white);
   text-decoration: none;
   font-size: 1.4rem;
@@ -111,7 +111,7 @@ body {
   padding: 0 0.5rem;
 }
 
-.nav__link a:hover {
+.nav__item a:hover {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
   text-decoration-thickness: 0.1rem;
@@ -129,20 +129,6 @@ body {
   margin-top: 10px;
 }
 
-/* Horizontal Divider */
-.divider--container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.divider {
-  background-color: var(--gray);
-  width: 80%;
-  height: 0.1rem;
-}
-
 /* Page Sections */
 .section {
   display: flex;
@@ -151,6 +137,7 @@ body {
   padding: 0px 8rem;
   gap: 6rem;
   height: 50rem;
+  transition: transform 1s, opacity 1s;
 }
 
 .section img {
@@ -162,6 +149,11 @@ body {
 
 .section .description {
   max-width: 50rem;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 /* Home Section */
@@ -187,12 +179,12 @@ body {
 }
 
 /* About Section */
-#about p {
+#section--1 p {
   margin-bottom: 1.2rem;
   font-size: 1.2rem;
 }
 
-#about ul li {
+#section--1 ul li {
   color: var(--darkest-green);
   line-height: 1.8rem;
   font-size: 1.2rem;
@@ -265,12 +257,12 @@ td {
   padding: 5px 20px;
 }
 /* Activities Section */
-#activities ul {
+#section--2 ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-#activities ul li {
+#section--2 ul li {
   color: var(--darkest-green);
   list-style-type: none;
   text-align: center;
@@ -279,7 +271,7 @@ td {
   font-size: 20px;
 }
 
-#activities p {
+#section--2 p {
   margin-top: 20px;
   color: var(--darkest-green);
   font-size: 20px;
@@ -359,7 +351,7 @@ td {
 }
 
 /* Services Section */
-#services p {
+#section--3 p {
   margin-top: 15px;
   color: var(--darkest-green);
   font-size: 20px;
@@ -367,7 +359,7 @@ td {
 }
 
 /* Contact-Us Section */
-#contact-us {
+#section--4 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -376,10 +368,16 @@ td {
   padding: 20px;
 }
 
-#contact-us h2 {
+#section--4 h2 {
   text-align: center;
   margin-bottom: 20px;
   padding-bottom: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-div {
@@ -538,6 +536,7 @@ td {
     margin: 10px 0;
     border-radius: 0px;
     padding: 20px 0;
+    border-top: 2px solid red;
   }
 
   .section img {
@@ -548,7 +547,7 @@ td {
     width: 80%;
   }
 
-  #about {
+  #section--1 {
     flex-direction: column-reverse;
   }
 
@@ -556,7 +555,7 @@ td {
     padding: 0 10px;
   }
 
-  #services {
+  #section--3 {
     flex-direction: column-reverse;
   }
 
@@ -564,7 +563,7 @@ td {
     display: none;
   }
 
-  #contact-us {
+  #section--4 {
     margin: 0;
     padding: 20px;
   }

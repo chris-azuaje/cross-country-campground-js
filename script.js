@@ -1,57 +1,81 @@
+'use strict';
+
 const navbar = document.querySelector('#navbar');
-const aboutBtn = document.querySelector('#aboutBtn');
-const aboutSection = document.querySelector('#about');
-const activitiesBtn = document.querySelector('#activitiesBtn');
-const activitiesSection = document.querySelector('#activities');
-const servicesBtn = document.querySelector('#servicesBtn');
-const servicesSection = document.querySelector('#services');
-const contactUsBtn = document.querySelector('#contactUsBtn');
-const contactUsSection = document.querySelector('#contact-us');
 
 // Scroll Into View
-aboutBtn.addEventListener('click', function () {
-  aboutSection.scrollIntoView({ behavior: 'smooth' });
+document.querySelector('#nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
 });
 
-activitiesBtn.addEventListener('click', function () {
-  activitiesSection.scrollIntoView({ behavior: 'smooth' });
-});
+// Modal Window 2.0
 
-servicesBtn.addEventListener('click', function () {
-  servicesSection.scrollIntoView({ behavior: 'smooth' });
-});
-
-contactUsBtn.addEventListener('click', function () {
-  contactUsSection.scrollIntoView({ behavior: 'smooth' });
-});
-
-// Modal Window
+const buttons = document.querySelectorAll('button');
 const overlay = document.querySelector('.modal-overlay');
-const rulesModal = document.querySelector('.rules');
-const rulesButton = document.querySelector('.rulesBtn');
-const ratesModal = document.querySelector('.rates');
-const ratesButton = document.querySelector('.ratesBtn');
-const galleryModal = document.querySelector('.gallery');
-const galleryButton = document.querySelector('.galleryBtn');
 
-rulesButton.addEventListener('click', function () {
-  rulesModal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
+buttons.forEach((btn) =>
+  btn.addEventListener('click', function (e) {
+    const modalName = e.target.classList[0].split('').slice(0, -3).join('');
+    document.querySelector(`.${modalName}`).classList.remove('hidden');
+    overlay.classList.remove('hidden');
+
+    overlay.addEventListener('click', function () {
+      document.querySelector(`.${modalName}`).classList.add('hidden');
+      overlay.classList.add('hidden');
+    });
+  })
+);
+
+// Reveal Sections
+const allSections = document.querySelectorAll('.section');
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  // console.log(entry);
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
 });
 
-ratesButton.addEventListener('click', function () {
-  ratesModal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
 });
 
-galleryButton.addEventListener('click', function () {
-  galleryModal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
+// Reveal Nav
+// Reveal Nav
+// Reveal Nav
+
+/*
+const nav = document.querySelector('#nav');
+
+const revealNav = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+};
+
+const navObserver = new IntersectionObserver(revealNav, {
+  root: null,
+  threshold: 0.1,
 });
 
-overlay.addEventListener('click', function () {
-  ratesModal.classList.add('hidden');
-  rulesModal.classList.add('hidden');
-  galleryModal.classList.add('hidden');
-  overlay.classList.add('hidden');
-});
+navObserver.observe(aboutSection);
+*/
+
+// Reveal Nav
+// Reveal Nav
+// Reveal Nav

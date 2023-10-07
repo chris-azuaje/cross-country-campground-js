@@ -12,78 +12,74 @@
   </head>
   <body>
 
-    <div id="contact-info">
-      <p>📍 6254 Highway 150 East Denver, NC 28037</p>
-      <p class="contact-info--divider"></p>
-      <p>📞 704-483-5801</p>
-    </div>
+    <header class="header">
+  <div id="contact-info">
+    <p>📍 6254 Highway 150 East Denver, NC 28037</p>
+    <p class="contact-info--divider"></p>
+    <p>📞 704-483-5801</p>
+  </div>
 
-    <nav id="nav">
-      <h1>Cross Country Campground</h1>
-      <ul id="nav__links">
-        <li class="nav__link">
+  <nav id="nav">
+    <h1>Cross Country Campground</h1>
+    <ul id="nav__links">
+      <li class="nav__item">
+        <a href="#section--1" class="nav__link" id="aboutBtn">About Us</a>
+      </li>
+      <li class="nav__item">
+        <a href="#section--2" class="nav__link" id="activitiesBtn">Activities</a>
+      </li>
+      <li class="nav__item">
+        <a href="#section--3" class="nav__link" id="servicesBtn">Services</a>
+      </li>
+      <li class="nav__item">
+        <a href="#section--4" class="nav__link" id="contactUsBtn">Contact Us</a>
+      </li>
+    </ul>
+    <div class="hamburger-icon">
+      <div class="bar-1"></div>
+      <div class="bar-2"></div>
+      <div class="bar-3"></div>
+      <ul class="mobile-menu">
+        <li>
           <a href="#">Home</a>
         </li>
-        <li class="nav__link">
-          <a href="#" id="aboutBtn">About Us</a>
+        <li>
+          <a href="#">About Us</a>
         </li>
-        <li class="nav__link">
-          <a href="#" id="activitiesBtn">Activities</a>
+        <li>
+          <a href="#">Activities</a>
         </li>
-        <li class="nav__link">
-          <a href="#" id="servicesBtn">Services</a>
+        <li>
+          <a href="#">Services</a>
         </li>
-        <li class="nav__link">
-          <a href="#" id="contactUsBtn">Contact Us</a>
+        <li>
+          <a href="#">Contact Us</a>
         </li>
       </ul>
-      <div class="hamburger-icon">
-        <div class="bar-1"></div>
-        <div class="bar-2"></div>
-        <div class="bar-3"></div>
-        <ul class="mobile-menu">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About Us</a>
-          </li>
-          <li>
-            <a href="#">Activities</a>
-          </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <p id="introduction">
-      A full-service campground located close to Lake Norman, Concord Mills Mall
-      and Lowes Motor Speedway
-    </p>
-
-    <div id="home" class="section">
-      <img src="images\relaxed.jpg" alt="relaxed" class="home-img" />
-      <div class="description">
-        <p>
-          Over 400 campsites nestled in refreshing wooded areas, most with full
-          hookup and 30-50 amp service. Complete heated bath-house, laundry and
-          onsite store. Activities abound with Carpet Golf, Shuffle Board,
-          Indoor Games, Tennis, Fishing, Swimming, Basketball, Nature Hiking and
-          even much more!
-        </p>
-      </div>
     </div>
+  </nav>
 
-    <div class="divider--container">
-      <div class="divider"></div>
+  <p id="introduction">
+    A full-service campground located close to Lake Norman, Concord Mills Mall
+    and Lowes Motor Speedway
+  </p>
+
+  <div id="home" class="section">
+    <img src="images\relaxed.jpg" alt="relaxed" class="home-img" />
+    <div class="description">
+      <p>
+        Over 400 campsites nestled in refreshing wooded areas, most with full
+        hookup and 30-50 amp service. Complete heated bath-house, laundry and
+        onsite store. Activities abound with Carpet Golf, Shuffle Board,
+        Indoor Games, Tennis, Fishing, Swimming, Basketball, Nature Hiking and
+        even much more!
+      </p>
     </div>
+  </div>
 
-    <div id="about" class='section'>
+    </header>
+
+    <section id="section--1" class='section'>
         <div class="description">
           <h2 class='section-title'>About Us</h2>
           <p>Visit or Stay with us...</p>
@@ -112,105 +108,9 @@
           </div>
         </div>
         <img src='images\night-rv.jpg' alt='' class='night-rv-img'></img>
-    </div>
+    </section>
 
-    <div class='rules modal-window hidden'>
-        <div class='exitBtn-container'>
-          <button class='exitBtn'>X</button>
-        </div>
-        <h2 class='section-title'>Campground Rules</h2>
-        <textarea
-                name="rules"
-                rows='20'
-                cols='80'
-                disabled
-              >
-- Don’t walk through other people’s sites (and make sure your kids understand this, too).
-- Don’t trash your campsite.
-- Keep your distance and respect others’ space.
-- Put out your fire – all the way out!
-- DO NOT BURN TRASH!
-- Be mindful of quiet times.
-- Be aware of and respectful with your lights.
-- Don’t be chatty with your new neighbor as soon as they pull in.
-- “Bring Your Own” when going over for a social visit 
-- Don’t assume everyone loves your pet as much as you do.
-- Don’t assume everyone loves your kids as much as you do.
-- Don’t just pop-in.
-- Familiarize yourself with campground rules – not all are the same.
-- Don’t bring your own firewood. 
-- Don’t cut down branches or trees in your campsite for firewood.
-- Respect the campground facilities.
-- Don’t park your tow or toad vehicle in another person’s way or block an open site.
-- Don’t set up camp at overnight parking, rest stop, and lot-docking areas.
-- Respect wildlife.
-- Only Dump Your Tanks at a Designated Dump Station
-      </textarea>
-    </div>
-
-    <div class='rates modal-window hidden'>
-        <div class='exitBtn-container'>
-          <button class='exitBtn'>X</button>
-        </div>
-        <h2 class='section-title'>Campground Rates</h2>
-        <table>
-          <thead>
-            <tr>
-              <th rowSpan={2} colSpan={1}>
-                Activity
-              </th>
-              <th colSpan={3}>Summer</th>
-              <th colSpan={3}>Winter</th>
-            </tr>
-            <tr>
-              <th>Daily</th>
-              <th>Weekly</th>
-              <th>Monthly</th>
-              <th>Daily</th>
-              <th>Weekly</th>
-              <th>Monthly</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>RV Site Standard</td>
-              <td>$75</td>
-              <td>$450</td>
-              <td>$1400</td>
-              <td>$55</td>
-              <td>$330</td>
-              <td>$700</td>
-            </tr>
-            <tr>
-              <td>RV Site Deluxe</td>
-              <td>$85</td>
-              <td>$510</td>
-              <td>$1600</td>
-              <td>$65</td>
-              <td>$390</td>
-              <td>$800</td>
-            </tr>
-            <tr>
-              <td>Holiday</td>
-              <td>$5/night - 2 night minimum</td>
-            </tr>
-            <tr>
-              <td>Tent Site</td>
-              <td>$30</td>
-            </tr>
-            <tr>
-              <td>Glamping Tent</td>
-              <td>$80 - $130</td>
-            </tr>
-          </tbody>
-        </table>
-    </div>
-
-    <div class="divider--container">
-        <div class="divider"></div>
-    </div>
-
-    <div id="activities" class='section'>
+    <section id="section--2" class='section'>
         <img src='images\swimmer.jpg' alt='' class='swimmer-img' />
         <div class="description">
           <h2 class='section-title'>Activities</h2>
@@ -236,43 +136,9 @@
             <button class="galleryBtn">Campground Gallery</button>
           </div>
         </div>
-    </div>
+    </section>
 
-    <div class="gallery modal-window hidden">
-      <h2 class='section-title'>Campground Gallery</h2>
-      <div id="gallery" class="slider">      
-        <div class="slides">
-          <input type="radio" name="radio-btn" id="radio1">
-          <input type="radio" name="radio-btn" id="radio2">
-          <input type="radio" name="radio-btn" id="radio3">
-          <input type="radio" name="radio-btn" id="radio4">
-          <div class="slide first">
-            <img src="images\relaxed.jpg" alt="">
-          </div>
-          <div class="slide">
-            <img src="images\swimmer.jpg" alt="">
-          </div>
-          <div class="slide">
-            <img src="images\night-rv.jpg" alt="">
-          </div>
-          <div class="slide">
-            <img src="images\gas-station.jpg" alt="">
-          </div>
-        </div>
-        <div class="navigation-manual">
-          <label for="radio1" class="manual-btn"></label>
-          <label for="radio2" class="manual-btn"></label>
-          <label for="radio3" class="manual-btn"></label>
-          <label for="radio4" class="manual-btn"></label>
-        </div>
-      </div>
-    </div>
-
-    <div class="divider--container">
-        <div class="divider"></div>
-    </div>
-
-    <div id="services" class="section">
+    <section id="section--3" class="section">
         <div class="description">
           <h2 class="section-title">Services</h2>
           <p>
@@ -287,13 +153,9 @@
           </p>
         </div>
         <img src="images\gas-station.jpg" alt="" class="gas-station-img" />
-    </div>
+    </section>
 
-    <div class="divider--container">
-        <div class="divider"></div>
-    </div>
-
-    <div id='contact-us'>
+    <section id='section--4' class="section">
         <form>
           <h2 class='section-title'>Contact Us</h2>
           <div class='form-div'>
@@ -358,7 +220,7 @@
         <button class='form-btn'>
           Send Message
         </button>
-    </div>
+    </section>
 
     <div id="footer">
         <div class="info">
@@ -385,6 +247,128 @@
             <p>Phone: 704-483-5801</p>
           </div>
         </div>
+    </div>
+
+    <div class='rules modal hidden'>
+      <div class='exitBtn-container'>
+        <button class='exitBtn'>X</button>
+      </div>
+      <h2 class='section-title'>Campground Rules</h2>
+      <textarea
+              name="rules"
+              rows='20'
+              cols='80'
+              disabled
+            >
+- Don’t walk through other people’s sites (and make sure your kids understand this, too).
+- Don’t trash your campsite.
+- Keep your distance and respect others’ space.
+- Put out your fire – all the way out!
+- DO NOT BURN TRASH!
+- Be mindful of quiet times.
+- Be aware of and respectful with your lights.
+- Don’t be chatty with your new neighbor as soon as they pull in.
+- “Bring Your Own” when going over for a social visit 
+- Don’t assume everyone loves your pet as much as you do.
+- Don’t assume everyone loves your kids as much as you do.
+- Don’t just pop-in.
+- Familiarize yourself with campground rules – not all are the same.
+- Don’t bring your own firewood. 
+- Don’t cut down branches or trees in your campsite for firewood.
+- Respect the campground facilities.
+- Don’t park your tow or toad vehicle in another person’s way or block an open site.
+- Don’t set up camp at overnight parking, rest stop, and lot-docking areas.
+- Respect wildlife.
+- Only Dump Your Tanks at a Designated Dump Station
+    </textarea>
+    </div>
+
+    <div class='rates modal hidden'>
+      <div class='exitBtn-container'>
+        <button class='exitBtn'>X</button>
+      </div>
+      <h2 class='section-title'>Campground Rates</h2>
+      <table>
+        <thead>
+          <tr>
+            <th rowSpan={2} colSpan={1}>
+              Activity
+            </th>
+            <th colSpan={3}>Summer</th>
+            <th colSpan={3}>Winter</th>
+          </tr>
+          <tr>
+            <th>Daily</th>
+            <th>Weekly</th>
+            <th>Monthly</th>
+            <th>Daily</th>
+            <th>Weekly</th>
+            <th>Monthly</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RV Site Standard</td>
+            <td>$75</td>
+            <td>$450</td>
+            <td>$1400</td>
+            <td>$55</td>
+            <td>$330</td>
+            <td>$700</td>
+          </tr>
+          <tr>
+            <td>RV Site Deluxe</td>
+            <td>$85</td>
+            <td>$510</td>
+            <td>$1600</td>
+            <td>$65</td>
+            <td>$390</td>
+            <td>$800</td>
+          </tr>
+          <tr>
+            <td>Holiday</td>
+            <td>$5/night - 2 night minimum</td>
+          </tr>
+          <tr>
+            <td>Tent Site</td>
+            <td>$30</td>
+          </tr>
+          <tr>
+            <td>Glamping Tent</td>
+            <td>$80 - $130</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="gallery modal hidden">
+    <h2 class='section-title'>Campground Gallery</h2>
+    <div id="gallery" class="slider">      
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <div class="slide first">
+          <img src="images\relaxed.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="images\swimmer.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="images\night-rv.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="images\gas-station.jpg" alt="">
+        </div>
+      </div>
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
     </div>
 
     <div class="modal-overlay hidden"></div>
