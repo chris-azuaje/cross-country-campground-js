@@ -1,8 +1,13 @@
 'use strict';
 
+// ---- Scroll to top of page ----
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
+// ---- Scroll Into View ----
 const navbar = document.querySelector('#navbar');
 
-// Scroll Into View
 document.querySelector('#nav__links').addEventListener('click', function (e) {
   e.preventDefault();
 
@@ -12,30 +17,11 @@ document.querySelector('#nav__links').addEventListener('click', function (e) {
   }
 });
 
-// Modal Window 2.0
-
-const buttons = document.querySelectorAll('button');
-const overlay = document.querySelector('.modal-overlay');
-
-buttons.forEach((btn) =>
-  btn.addEventListener('click', function (e) {
-    const modalName = e.target.classList[0].split('').slice(0, -3).join('');
-    document.querySelector(`.${modalName}`).classList.remove('hidden');
-    overlay.classList.remove('hidden');
-
-    overlay.addEventListener('click', function () {
-      document.querySelector(`.${modalName}`).classList.add('hidden');
-      overlay.classList.add('hidden');
-    });
-  })
-);
-
-// Reveal Sections
-const allSections = document.querySelectorAll('.section');
+// ---- Reveal Sections ----
+const sections = document.querySelectorAll('.section');
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  // console.log(entry);
 
   if (!entry.isIntersecting) return;
 
@@ -48,38 +34,40 @@ const sectionObserver = new IntersectionObserver(revealSection, {
   threshold: 0.15,
 });
 
-allSections.forEach(function (section) {
+sections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden');
 });
 
-// Reveal Nav
-// Reveal Nav
-// Reveal Nav
+// ---- Modal Functionality ----
+const buttons = document.querySelectorAll('button');
+const overlay = document.querySelector('.modal-overlay');
+const exitBtn = document.querySelectorAll('.exitBtn');
 
-/*
-const nav = document.querySelector('#nav');
+buttons.forEach((btn) =>
+  btn.addEventListener('click', function (e) {
+    // Modal Appears
+    const modalName = e.target.classList[0].split('').slice(0, -3).join('');
+    document.querySelector(`.${modalName}`).classList.remove('hidden');
+    overlay.classList.remove('hidden');
 
-const revealNav = function (entries, observer) {
-  const [entry] = entries;
-  console.log(entry);
+    // Remove Modal via overlay
+    overlay.addEventListener('click', function () {
+      document.querySelector(`.${modalName}`).classList.add('hidden');
+      overlay.classList.add('hidden');
+    });
 
-  if (entry.isIntersecting) nav.classList.add('sticky');
-  else nav.classList.remove('sticky');
-};
+    // Remove Modal via exit button
+    exitBtn.forEach(function (e) {
+      e.addEventListener('click', function () {
+        document.querySelector(`.${modalName}`).classList.add('hidden');
+        overlay.classList.add('hidden');
+      });
+    });
+  })
+);
 
-const navObserver = new IntersectionObserver(revealNav, {
-  root: null,
-  threshold: 0.1,
-});
-
-navObserver.observe(aboutSection);
-*/
-
-// Reveal Nav
-// Reveal Nav
-// Reveal Nav
-
+// ---- Calendar ----
 const daysTag = document.querySelector('.days'),
   currentDate = document.querySelector('.current-date'),
   prevNextIcon = document.querySelectorAll('.icons span');
@@ -149,3 +137,24 @@ prevNextIcon.forEach((icon) => {
     renderCalendar(); // calling renderCalendar function
   });
 });
+
+// ---- Reveal Nav ----
+
+/*
+const nav = document.querySelector('#nav');
+
+const revealNav = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+};
+
+const navObserver = new IntersectionObserver(revealNav, {
+  root: null,
+  threshold: 0.1,
+});
+
+navObserver.observe(aboutSection);
+*/
