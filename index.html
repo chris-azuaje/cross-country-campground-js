@@ -15,13 +15,13 @@
   <body>
 
     <header class="header">
-  <div id="contact-info">
+      <div id="contact-info">
     <p>📍 6254 Highway 150 East Denver, NC 28037</p>
     <p class="contact-info--divider"></p>
     <p>📞 704-483-5801</p>
-  </div>
+      </div>
 
-  <nav id="nav">
+      <nav id="nav">
     <h1>Cross Country Campground</h1>
     <ul id="nav__links">
       <li class="nav__item">
@@ -59,14 +59,14 @@
         </li>
       </ul>
     </div>
-  </nav>
+      </nav>
 
-  <p id="introduction">
+      <p id="introduction">
     A full-service campground located close to Lake Norman, Concord Mills Mall
     and Lowes Motor Speedway
-  </p>
+      </p>
 
-  <div id="home" class="section">
+      <div id="home" class="section">
     <img src="images\relaxed.jpg" alt="relaxed" class="home-img" />
     <div class="description">
       <p>
@@ -77,8 +77,7 @@
         even much more!
       </p>
     </div>
-  </div>
-
+      </div>
     </header>
 
     <section id="section--1" class='section'>
@@ -158,7 +157,7 @@
     </section>
 
     <section id='section--4' class="section">
-        <form>
+        <form onsubmit="sendEmail(); reset(); return false;">
           <h2 class='section-title'>Contact Us</h2>
           <div class='form-div'>
             <div class='form-inline'>
@@ -219,7 +218,7 @@
             </div>
           </div>
         </form>
-        <button class='form-btn'>
+        <button class='form-btn' type="submit">
           Send Message
         </button>
     </section>
@@ -416,11 +415,20 @@
         <label for="radio4" class="manual-btn"></label>
       </div>
     </div>
+    <!-- <div class="slider">
+      <div class="slide"><img src="images\relaxed.jpg" alt="Photo 1"></div>
+      <div class="slide"><img src="images\swimmer.jpg" alt="Photo 1"></div>
+      <div class="slide"><img src="images\night-rv.jpg" alt="Photo 1"></div>
+      <div class="slide"><img src="images\gas-station.jpg" alt="Photo 1"></div>
+      <button class="slider__btn slider__btn--left">&larr;</button>
+      <button class="slider__btn slider__btn--right">&rarr;</button>
+      <div class="dots"></div>
+    </div> -->
     </div>
 
     <div class="modal-overlay hidden"></div>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
-
   </body>
 </html>
