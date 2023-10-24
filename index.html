@@ -80,7 +80,7 @@
       </div>
     </header>
 
-    <section id="section--1" class='section'>
+    <section id="section--1" class='section aboutUs'>
         <div class="description">
           <h2 class='section-title'>About Us</h2>
           <p>Visit or Stay with us...</p>
@@ -111,7 +111,7 @@
         <img src='images\night-rv.jpg' alt='' class='night-rv-img'></img>
     </section>
 
-    <section id="section--2" class='section'>
+    <section id="section--2" class='section activities'>
         <img src='images\swimmer.jpg' alt='' class='swimmer-img' />
         <div class="description">
           <h2 class='section-title'>Activities</h2>
@@ -139,7 +139,7 @@
         </div>
     </section>
 
-    <section id="section--3" class="section">
+    <section id="section--3" class="section services">
         <div class="description">
           <h2 class="section-title">Services</h2>
           <p>
@@ -156,7 +156,7 @@
         <img src="images\gas-station.jpg" alt="" class="gas-station-img" />
     </section>
 
-    <section id='section--4' class="section">
+    <section id='section--4' class="section contactUs">
         <form onsubmit="sendEmail(); reset(); return false;">
           <h2 class='section-title'>Contact Us</h2>
           <div class='form-div'>
@@ -223,7 +223,7 @@
         </button>
     </section>
 
-    <section id="section--5" class="section">
+    <section id="section--5" class="section map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6490.405494251006!2d-81.04587318746991!3d35.573387269668835!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856b4f4d7ee4fdf%3A0x146f22340eaa9756!2sCross%20Country%20Campgrounds!5e0!3m2!1sen!2sus!4v1696946081240!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
@@ -261,33 +261,29 @@
         </span>
       </div>
       <h2 class='section-title'>Campground Rules</h2>
-      <textarea
-              name="rules"
-              rows='20'
-              cols='80'
-              disabled
-            >
-- Don’t walk through other people’s sites (and make sure your kids understand this, too).
-- Don’t trash your campsite.
-- Keep your distance and respect others’ space.
-- Put out your fire – all the way out!
-- DO NOT BURN TRASH!
-- Be mindful of quiet times.
-- Be aware of and respectful with your lights.
-- Don’t be chatty with your new neighbor as soon as they pull in.
-- “Bring Your Own” when going over for a social visit 
-- Don’t assume everyone loves your pet as much as you do.
-- Don’t assume everyone loves your kids as much as you do.
-- Don’t just pop-in.
-- Familiarize yourself with campground rules – not all are the same.
-- Don’t bring your own firewood. 
-- Don’t cut down branches or trees in your campsite for firewood.
-- Respect the campground facilities.
-- Don’t park your tow or toad vehicle in another person’s way or block an open site.
-- Don’t set up camp at overnight parking, rest stop, and lot-docking areas.
-- Respect wildlife.
-- Only Dump Your Tanks at a Designated Dump Station
-    </textarea>
+      <ul>
+        <li><p>Don’t walk through other people’s sites (and make sure your kids understand this, too).</p></li>
+        <li><p>Don’t trash your campsite.</p></li>
+        <li><p>Keep your distance and respect others’ space.</p></li>
+        <li><p>Put out your fire – all the way out!</p></li>
+        <li><p>DO NOT BURN TRASH!</p></li>
+        <li><p>Be mindful of quiet times.</p></li>
+        <li><p>Be aware of and respectful with your lights.</p></li>
+        <li><p>Don’t be chatty with your new neighbor as soon as they pull in.</p></li>
+        <li><p>“Bring Your Own” when going over for a social visit.</p></li>
+        <li><p>Don’t assume everyone loves your pet as much as you do.</p></li>
+        <li><p>Don’t assume everyone loves your kids as much as you do.</p></li>
+        <li><p>Don’t just pop-in.</p></li>
+        <li><p>Familiarize yourself with campground rules – not all are the same.</p></li>
+        <li><p>Don’t bring your own firewood.</p></li>
+        <li><p>Don’t cut down branches or trees in your campsite for firewood.</p></li>
+        <li><p>Respect the campground facilities.</p></li>
+        <li><p>Don’t park your tow or toad vehicle in another person’s way or block an open site.</p></li>
+        <li><p>Don’t set up camp at overnight parking, rest stop, and lot-docking areas.</p></li>
+        <li><p>Respect wildlife.</p></li>
+        <li><p>Only Dump Your Tanks at a Designated Dump Station</p></li>
+      </ul>
+      
     </div>
 
     <div class='rates modal hidden'>
@@ -382,48 +378,32 @@
       </div>
     </div>
 
-    <div class="gallery modal hidden">
+    <div class="gallery">
       <div class='exitBtn-container'>
         <span class="material-symbols-outlined exitBtn">
           close
         </span>
       </div>
-    <h2 class='section-title'>Campground Gallery</h2>
-    <div id="gallery" class="slider">      
-      <div class="slides">
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        <input type="radio" name="radio-btn" id="radio4">
-        <div class="slide first">
-          <img src="images\relaxed.jpg" alt="">
-        </div>
-        <div class="slide">
-          <img src="images\swimmer.jpg" alt="">
-        </div>
-        <div class="slide">
-          <img src="images\night-rv.jpg" alt="">
-        </div>
-        <div class="slide">
-          <img src="images\gas-station.jpg" alt="">
+      <h2 class='section-title'>Campground Gallery</h2>
+      <div id="gallery" class="slider">      
+        <div class="slides">      
+          <div class="slide first">
+            <img src="images\relaxed.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images\swimmer.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images\night-rv.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images\gas-station.jpg" alt="">
+          </div>
+          <button class="slider__btn slider__btn--left">&larr;</button>
+          <button class="slider__btn slider__btn--right">&rarr;</button>
+          <div class="dots"></div>
         </div>
       </div>
-      <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-      </div>
-    </div>
-    <!-- <div class="slider">
-      <div class="slide"><img src="images\relaxed.jpg" alt="Photo 1"></div>
-      <div class="slide"><img src="images\swimmer.jpg" alt="Photo 1"></div>
-      <div class="slide"><img src="images\night-rv.jpg" alt="Photo 1"></div>
-      <div class="slide"><img src="images\gas-station.jpg" alt="Photo 1"></div>
-      <button class="slider__btn slider__btn--left">&larr;</button>
-      <button class="slider__btn slider__btn--right">&rarr;</button>
-      <div class="dots"></div>
-    </div> -->
     </div>
 
     <div class="modal-overlay hidden"></div>

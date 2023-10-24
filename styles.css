@@ -27,11 +27,6 @@ body {
   align-items: center;
 }
 
-.map {
-  width: 100%;
-  height: 400px;
-  background-color: grey;
-}
 /* Modal Window & Overlay */
 .modal {
   z-index: 10;
@@ -231,7 +226,7 @@ body {
 }
 
 .exitBtn:hover {
-  cursor: pointer;
+  cursor: default;
   background-color: var(--gray);
 }
 
@@ -383,6 +378,8 @@ header .current-date {
   border-radius: 10px;
   overflow: hidden;
 }
+
+/* Stopped here */
 
 .slides {
   width: 500%;
